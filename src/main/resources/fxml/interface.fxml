@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iloLookUp.Controller">
+    <Pane prefHeight="117.0" prefWidth="552.0">
+        <ChoiceBox fx:id="select_type" layoutX="22.0" layoutY="26.0" onAction="#updateNumbers" prefHeight="29.0" prefWidth="215.0" />
+        <TextField fx:id="input_number" layoutX="249.0" layoutY="26.0" prefHeight="29.0" prefWidth="153.0" promptText="1, 28, 111..." />
+        <Button fx:id="button_buscar" layoutX="413.0" layoutY="60.0" mnemonicParsing="false" onAction="#comenzar" prefHeight="29.0" prefWidth="121.0" text="%abrir" />
+      <ChoiceBox fx:id="language_picker" layoutX="413.0" layoutY="26.0" prefHeight="29.0" prefWidth="121.0" />
+      <ChoiceBox fx:id="select_section" layoutX="249.0" layoutY="62.0" prefHeight="25.0" prefWidth="153.0" />
+      <CheckBox id="output" fx:id="alinear_idiomas" layoutX="22.0" layoutY="66.0" mnemonicParsing="false" text="%extract"/>
+      </Pane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

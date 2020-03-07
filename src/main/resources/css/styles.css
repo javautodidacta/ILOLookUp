@@ -1,0 +1,104 @@
+.root {
+    -fx-background-image: url("images/cafe2-01.jpg");
+    -fx-background-size: cover;
+}
+
+#transparentPane {
+    -fx-background-color: rgba(256, 256, 256, 0.5);
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+}
+
+#output {
+    -fx-padding: 5 5 5 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+    -fx-background-color: rgba(256, 256, 256, 0.5);
+}
+
+.text-area {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: lightseagreen;
+    -fx-background-insets: 0;
+}
+
+.text-field {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5 5 5 10;
+}
+
+.choice-box {
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+        -fx-background-radius: 10;
+        -fx-padding: 0 0 0 5;
+        -fx-text-fill: #242d35;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color:lightseagreen;
+    -fx-border-radius:3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: lightseagreen;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #28a3f4;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-body-color: #e4fbff;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: ladder(#e4fbff, #a5d3fb 50%, #d5faff 100%);
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: ladder(#e4fbff, #a5d3fb 50%, #d5faff 100%);
+}
+
+.button:pressed {
+    -fx-background-insets: 0 0 -1 0,1,2;
+}
+
+.button {
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+        -fx-background-insets: 0 0 -1 0,0,1;
+        -fx-background-radius: 10;
+        -fx-padding: 3 30 3 30;
+        -fx-text-fill: #242d35;
+}
