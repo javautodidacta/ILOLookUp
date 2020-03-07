@@ -19,7 +19,7 @@ C:\<Full path>\jdk-13.0.2\bin\java.exe --module-path=C:\<Full path>\javafx-sdk-1
 ```
 Don't forget to replace **\<Full path\>** with the actual path to the needed resources and the **jar** file.
 
-**ILOLookUp** doesn't need instalation -- double click the **bat** file you just created.
+**ILOLookUp** doesn't need instalation -- double click the **bat** file you just created. A black MS-Dos windows will open -- **it is normal**.
 
 ## Features
 ### Conventions and Recommendations
