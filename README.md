@@ -12,7 +12,7 @@ In order to use **ILO Look Up**, you need to download the latest version of the 
 
 Download the zips and extract the files.
 
-Download **ILOLookUp.jar** and create a **.bat** file (i. e. _ILOLookUp.bat_) with the following text:
+[Download **ILOLookUp.jar**](https://github.com/javautodidacta/ILOLookUp/raw/master/out/artifacts/ILOLookUp_jar/ILOLookUp.jar) and create a **.bat** file (i. e. _ILOLookUp.bat_) with the following text:
 ```
 @echo off
 C:\<Full path>\jdk-13.0.2\bin\java.exe --module-path=C:\<Full path>\javafx-sdk-13.0.2\lib --add-modules=javafx.controls,javafx.fxml -jar "C:\<Full path>\ILOLookUp.jar"
