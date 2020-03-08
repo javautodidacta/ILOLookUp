@@ -17,9 +17,9 @@ Download the zips and extract the files.
 @echo off
 C:\<Full path>\jdk-13.0.2\bin\java.exe --module-path=C:\<Full path>\javafx-sdk-13.0.2\lib --add-modules=javafx.controls,javafx.fxml -jar "C:\<Full path>\ILOLookUp.jar"
 ```
-Don't forget to replace **\<Full path\>** with the actual path to the needed resources and the **jar** file.
+Don't forget to replace **\<Full path\>** with the actual path to the needed resources and the **jar** file. Keep an eye on the jdk and JavaFX version and update it accordingly.
 
-**ILOLookUp** doesn't need instalation -- double click the **bat** file you just created. A black MS-Dos windows will open -- **it is normal**.
+**ILOLookUp** doesn't need instalation -- double click the **bat** file you just created. A black MS-Dos window will open -- **it is normal**.
 
 ## Features
 ### Conventions and Recommendations
