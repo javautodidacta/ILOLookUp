@@ -4,6 +4,7 @@ Tool for browsing ILO Conventions, Recommendations, GB and ILO Conferences.
 [ILO site](https://www.ilo.org/global/lang--en/index.htm)
 
 ## How-to
+Create a new folder (name it, i. e., _ILO_programme_).
 In order to use **ILO Look Up**, you need to download the latest version of the **JDK (Java Development Kit)** and the **JavaFX** libraries:
 
 * [JDK 13 Windows x64 Compressed Archive](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html), needed to run the **jar** file.
@@ -15,9 +16,10 @@ Download the zips and extract the files.
 [Download **ILOLookUp.jar**](https://github.com/javautodidacta/ILOLookUp/raw/master/out/artifacts/ILOLookUp_jar/ILOLookUp.jar) and create a **.bat** file (i. e. _ILOLookUp.bat_) with the following text:
 ```
 @echo off
-C:\<Full path>\jdk-13.0.2\bin\java.exe --module-path=C:\<Full path>\javafx-sdk-13.0.2\lib --add-modules=javafx.controls,javafx.fxml -jar "C:\<Full path>\ILOLookUp.jar"
+.\jdk-13.0.2\bin\java.exe --module-path=.\javafx-sdk-13.0.2\lib --add-modules=javafx.controls,javafx.fxml -jar ".\ILOLookUp.jar"
 ```
-Don't forget to replace **\<Full path\>** with the actual path to the needed resources and the **jar** file. Keep an eye on the jdk and JavaFX version and update it accordingly.
+Keep an eye on the **jdk** and **JavaFX** versions and change them accordingly.
+The **jdk** and **JavaFX** folders and both the **jar** and **bat** files should be together in the folder _ILO_programme_.
 
 **ILOLookUp** doesn't need instalation -- double click the **bat** file you just created. A black MS-Dos window will open -- **it is normal**.
 
