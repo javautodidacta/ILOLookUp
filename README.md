@@ -5,6 +5,7 @@ Tool for browsing ILO Conventions, Recommendations, GB and ILO Conferences.
 
 ## How-to
 Create a new folder (name it, i. e., _ILO_programme_).
+
 In order to use **ILO Look Up**, you need to download the latest version of the **JDK (Java Development Kit)** and the **JavaFX** libraries:
 
 * [JDK 13 Windows x64 Compressed Archive](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html), needed to run the **jar** file.
