@@ -1,3 +1,8 @@
+/*
+ * This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+ *
+ */
+
 package iloLookUp;
 
 import javafx.collections.FXCollections;
@@ -9,8 +14,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFFont;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.jsoup.Jsoup;
@@ -43,6 +49,7 @@ public class Controller implements Initializable {
     private final String BASE_URL_GB_PREVIOUS = "https://www.ilo.org/gb/GBSessions/previous-sessions/GB";
     private final String BASE_URL_CIT = "https://www.ilo.org/ilc/ILCSessions/";
     private final String BASE_URL_CIT_PREVIOUS = "https://www.ilo.org/ilc/ILCSessions/previous-sessions/";
+    private final String BASE_URL_TRANSLATORS = "https://www.ilo.org/global/tools/translators/lang--";
 
     public void initialize(URL location, ResourceBundle resources) {
         esParrafos = new ArrayList<>();
@@ -55,7 +62,8 @@ public class Controller implements Initializable {
                 l10n.getString("convenio_num"),
                 l10n.getString("recomendacion_num"),
                 l10n.getString("gb"),
-                l10n.getString("sesion_cit")));
+                l10n.getString("sesion_cit"),
+                l10n.getString("recursos_traductores")));
         select_type.setValue(l10n.getString("convenio_num"));
 
         select_section.setItems(FXCollections.observableList(Arrays.asList("--", "INS", "POL", "LILS", "PFA")));
@@ -161,6 +169,8 @@ public class Controller implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if (item.equals(l10n.getString("recursos_traductores"))) {
+            url = BASE_URL_TRANSLATORS + language + "/index.htm";
         }
         try {
             Desktop.getDesktop().browse(new URI(url));
@@ -331,6 +341,10 @@ public class Controller implements Initializable {
             alinear_idiomas.setVisible(false);
         } else if (select_type.getValue().equals(l10n.getString("sesion_cit"))) {
             input_number.setPromptText("90, 105, 109...");
+            select_section.setVisible(false);
+            alinear_idiomas.setVisible(false);
+        } else if (select_type.getValue().equals(l10n.getString("recursos_traductores"))) {
+            input_number.setVisible(false);
             select_section.setVisible(false);
             alinear_idiomas.setVisible(false);
         }

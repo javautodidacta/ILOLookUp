@@ -1,3 +1,8 @@
+/*
+ * This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+ *
+ */
+
 package iloLookUp;
 
 import javafx.application.Application;
@@ -6,7 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -29,12 +33,9 @@ public class Main extends Application {
         System.out.println("¡Gracias por utilizar este programa!\n" +
                 "Creado por Miguel Callejón Berenguer\n\n" +
                 "Abriendo... espera un poco.\n\n" +
-                "Versión 2 (marzo de 2020)\n" +
-                "Novedades en la versión 2:\n" +
-                "# Interfaz localizada (es, en, fr y ru). " +
-                "El idioma de la interfaz depende del idioma de Windows. El inglés es predeterminado.\n" +
-                "# Tiene en cuenta una redirección incorrecta en la página web.\n" +
-                "# Se puede especificar la sección (INS, LILS, POL, FPA) en GB.");
+                "Versión 3 (marzo de 2020)\n" +
+                "Novedades en la versión 3:\n" +
+                "# Recursos para traductores.");
         launch(args);
     }
 }
