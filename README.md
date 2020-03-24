@@ -3,6 +3,11 @@ Tool for browsing ILO Conventions, Recommendations, GB and ILO Conferences.
 
 [ILO site](https://www.ilo.org/global/lang--en/index.htm)
 
+## Version 3 - What's new?
+Direct link to [ILO's Resources for translators webpage](https://www.ilo.org/global/tools/translators/lang--en/index.htm).
+
+All you wanted to know but were afraid to ask.
+
 ## How-to
 Create a new folder (name it, i. e., _ILO_programme_).
 
@@ -45,5 +50,10 @@ Look up information about the latest International Labour Conference in Geneva, 
 >The member States of the ILO meet at the International Labour Conference, held every year in Geneva, Switzerland, in the month of June. Each member State is represented by a delegation consisting of two government delegates, an employer delegate, a worker delegate, and their respective advisers. (Employer and Worker delegates are nominated in agreement with the most representative national organizations of employers and workers.)
 
 Read further [here](https://www.ilo.org/ilc/AbouttheILC/lang--en/index.htm).
+
+### Resources for translators
+Direct link to [ILO's Resources for translators webpage](https://www.ilo.org/global/tools/translators/lang--en/index.htm).
+
+All you wanted to know but were afraid to ask.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
