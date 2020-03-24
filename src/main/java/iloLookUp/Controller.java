@@ -3,6 +3,11 @@
  *
  */
 
+/*
+ * This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+ *
+ */
+
 package iloLookUp;
 
 import javafx.collections.FXCollections;
@@ -13,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -25,7 +31,6 @@ import org.jsoup.safety.Whitelist;
 import java.awt.*;
 import java.io.*;
 import java.net.*;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.*;
@@ -37,6 +42,7 @@ public class Controller implements Initializable {
     public ChoiceBox<String> language_picker;
     public ChoiceBox<String> select_section;
     public CheckBox alinear_idiomas;
+    public ImageView ilo_logo;
 
     private ResourceBundle l10n;
 
@@ -52,6 +58,14 @@ public class Controller implements Initializable {
     private final String BASE_URL_TRANSLATORS = "https://www.ilo.org/global/tools/translators/lang--";
 
     public void initialize(URL location, ResourceBundle resources) {
+        Locale locale = Locale.getDefault();
+        if (locale.getLanguage().equals("es")) {
+            ilo_logo.setImage(new ImageView("/css/images/logo_esp.png").getImage());
+        } else if (locale.getLanguage().equals("fr")) {
+            ilo_logo.setImage(new ImageView("/css/images/logo_fra.png").getImage());
+        } else {
+            ilo_logo.setImage(new ImageView("/css/images/logo_eng.png").getImage());
+        }
         esParrafos = new ArrayList<>();
         enParrafos = new ArrayList<>();
         frParrafos = new ArrayList<>();
@@ -63,7 +77,9 @@ public class Controller implements Initializable {
                 l10n.getString("recomendacion_num"),
                 l10n.getString("gb"),
                 l10n.getString("sesion_cit"),
-                l10n.getString("recursos_traductores")));
+                l10n.getString("rodis"),
+                l10n.getString("mail"),
+                l10n.getString("multitrans_web")));
         select_type.setValue(l10n.getString("convenio_num"));
 
         select_section.setItems(FXCollections.observableList(Arrays.asList("--", "INS", "POL", "LILS", "PFA")));
@@ -171,6 +187,12 @@ public class Controller implements Initializable {
             }
         } else if (item.equals(l10n.getString("recursos_traductores"))) {
             url = BASE_URL_TRANSLATORS + language + "/index.htm";
+        } else if (item.equals(l10n.getString("mail"))) {
+            url = "https://mail.ilo.org";
+        } else if (item.equals(l10n.getString("rodis"))) {
+            url = "https://rodis.ilo.org";
+        } else if (item.equals(l10n.getString("multitrans_web"))) {
+            url = "http://www.ilo.org/MultiTransWeb/Account.mvc/DirectAccess?username=Guest";
         }
         try {
             Desktop.getDesktop().browse(new URI(url));
@@ -307,7 +329,7 @@ public class Controller implements Initializable {
             for (String field : parrafo) {
                 Cell cell = row.createCell(columnCount++);
                 cell.setCellStyle(cellStyle);
-                cell.setCellValue(new String(field.getBytes(Charset.forName("Windows-1252")), StandardCharsets.UTF_8));
+                cell.setCellValue(new String(field.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8));
             }
         }
 
@@ -333,20 +355,34 @@ public class Controller implements Initializable {
         if (select_type.getValue().equals(l10n.getString("convenio_num"))
                 || select_type.getValue().equals(l10n.getString("recomendacion_num"))) {
             input_number.setPromptText("1, 28, 111...");
+            input_number.setVisible(true);
             select_section.setVisible(false);
             alinear_idiomas.setVisible(true);
+            language_picker.setVisible(true);
         } else if (select_type.getValue().equals(l10n.getString("gb"))) {
             input_number.setPromptText("320, 331, 335...");
+            input_number.setVisible(true);
             select_section.setVisible(true);
             alinear_idiomas.setVisible(false);
+            language_picker.setVisible(true);
         } else if (select_type.getValue().equals(l10n.getString("sesion_cit"))) {
             input_number.setPromptText("90, 105, 109...");
+            input_number.setVisible(true);
             select_section.setVisible(false);
             alinear_idiomas.setVisible(false);
+            language_picker.setVisible(true);
         } else if (select_type.getValue().equals(l10n.getString("recursos_traductores"))) {
             input_number.setVisible(false);
             select_section.setVisible(false);
             alinear_idiomas.setVisible(false);
+            language_picker.setVisible(true);
+        } else if (select_type.getValue().equals(l10n.getString("mail"))
+                || select_type.getValue().equals(l10n.getString("rodis"))
+                || select_type.getValue().equals(l10n.getString("multitrans_web"))) {
+            input_number.setVisible(false);
+            select_section.setVisible(false);
+            alinear_idiomas.setVisible(false);
+            language_picker.setVisible(false);
         }
     }
 }
