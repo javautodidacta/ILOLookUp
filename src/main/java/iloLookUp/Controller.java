@@ -8,6 +8,11 @@
  *
  */
 
+/*
+ * This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+ *
+ */
+
 package iloLookUp;
 
 import javafx.collections.FXCollections;
@@ -77,6 +82,7 @@ public class Controller implements Initializable {
                 l10n.getString("recomendacion_num"),
                 l10n.getString("gb"),
                 l10n.getString("sesion_cit"),
+                l10n.getString("recursos_traductores"),
                 l10n.getString("rodis"),
                 l10n.getString("mail"),
                 l10n.getString("multitrans_web")));
